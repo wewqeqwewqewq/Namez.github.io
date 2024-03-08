@@ -1,0 +1,681 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(45deg, #ffbbc4, #ee5791, #bbfaff, #e6ffc8);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    color: #000;
+    font-size: 16px;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    width: 80%;
+    height: 450px;
+    position: relative;
+    margin: 100px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s;
+    background-image: url('3uuN.gif');
+    background-size: cover;
+    background-position: center;
+    animation: float 5s infinite, fadeIn 1s; /* Combine animations */
+    transition: transform 0.3s; /* Add transition for smoother movement */
+}
+
+.hero:hover {
+    transform: translateY(-10px); /* Adjust the hover effect */
+}
+
+.hero::before {
+    content: '';
+    display: block;
+    width: 50%; /* Adjust the size here */
+    height: 50%; /* Adjust the size here */
+    background-image: url('496f9a6a929b4f78bcf8cc15da25eabc_w200.gif');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1); /* Adjust the scale here */
+    animation: moveAnime 5s linear infinite;
+}
+
+@keyframes moveAnime {
+    0%, 100% {
+        transform: translate(-50%, -50%) rotate(0deg) scale(1); /* Adjust the scale here */
+    }
+    50% {
+        transform: translate(-55%, -45%) rotate(10deg) scale(2); /* Adjust the scale here */
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px); /* Adjust the movement here */
+    }
+}
+
+
+.btn-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s, transform 0.3s, border-color 0.3s;
+    animation: slideInDown 1s forwards;
+}
+
+.btn-box button {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 15px 20px;
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+    transition: color 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.btn-box button:hover {
+    color: #ff7846;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-box button .fa {
+    margin-right: 10px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 5% auto;
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    animation: slideInUp 1s forwards;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.content-left {
+    flex-basis: 50%;
+    padding: 20px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.content-left:hover {
+    transform: scale(1.05);
+    background-color: #f9f9f9;
+}
+
+.content-left h3 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    animation: slideInLeft 1s forwards;
+}
+
+.content-left p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.content-left a {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #ff7846;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.content-left a:hover {
+    background-color: #ff7846cc;
+    transform: translateY(-3px);
+}
+
+.content-right {
+    flex-basis: 50%;
+    overflow: hidden;
+    transition: transform 0.5s;
+}
+
+.content-right img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.content-right:hover img {
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes moveRightLeft {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+}
+
+@keyframes rotate {
+    0%, 100% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(20deg);
+    }
+}
+
+@keyframes scaleIn {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInOut {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.btn-box button {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 15px 20px;
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+    transition: color 0.3s, background-color 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
+    animation: fadeInOut 1s;
+}
+
+.btn-box button:hover {
+    color: #ff7846;
+    background-color: rgba(255, 120, 70, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+.btn-box button .fa {
+    margin-right: 10px;
+}
+
+
+.content {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 5% auto;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    animation: slideInUp 1s forwards;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.content:hover {
+    transform: scale(1.05);
+    background-color: #f9f9f9;
+}
+
+.content h3 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    animation: slideInLeft 1s forwards;
+}
+
+.content p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    animation: fadeIn 1s;
+}
+
+.content a {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #ff7846;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.content a:hover {
+    background-color: #ff7846cc;
+    animation: pulse 0.5s;
+}
+
+.content-right {
+    flex-basis: 50%;
+    overflow: hidden;
+    transition: transform 0.5s;
+}
+
+.content-right img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.content-right:hover img {
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes moveRightLeft {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+}
+
+@keyframes rotate {
+    0%, 100% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(20deg);
+    }
+}
+
+@keyframes scaleIn {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes fadeInOut {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.btn-box button {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 15px 20px;
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+    transition: color 0.3s, background-color 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
+    animation: fadeInOut 1s;
+}
+
+.btn-box button:hover {
+    color: #ff7846;
+    background-color: rgba(255, 120, 70, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+.btn-box button .fa {
+    margin-right: 10px;
+}
+
+.btn-box button:hover .fa {
+    animation: rotate 0.5s forwards;
+}
+
+.content a:hover {
+    background-color: #ff7846cc;
+    animation: pulse 0.5s;
+}
+
+.content-right:hover img {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.cartoon-character {
+    position: absolute;
+    bottom: -100px; /* Start position */
+    left: 50%;
+    transform: translateX(-50%);
+    animation: moveCharacter 5s linear infinite;
+}
+
+@keyframes moveCharacter {
+    0% {
+        bottom: -100px; /* Start position */
+    }
+    50% {
+        bottom: 50px; /* Middle position */
+    }
+    100% {
+        bottom: -100px; /* End position */
+    }
+}
+
+.bad {
+    width: 80%;
+    height: 450px;
+    position: relative;
+    margin: 100px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s;
+}
+
+.gif {
+    max-width: 200px; /* Set the maximum width */
+    height: auto; /* Maintain aspect ratio */
+    animation: float 3s ease infinite, rotate 3s linear infinite; /* Add floating and rotating animations */
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px); /* Adjust the vertical movement */
+    }
+}
+
+@keyframes rotate {
+    0%, 100% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(10deg); /* Adjust the rotation angle */
+    }
+}
+
+.animated-element {
+    opacity: 0;
+    animation: scrollAnimation 1s forwards;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.parallax {
+    background-image: url('background.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.custom-cursor {
+    cursor: url('Background.png'), auto;
+}
+
+
+@keyframes scrollAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Interactive element */
+.interactive-element {
+    transition: transform 0.3s;
+}
+
+.interactive-element:hover {
+    transform: scale(1.1);
+}
